@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+/* Boxes */
+
+.box {
+  background-color: red;
+  border: 2px solid black;
+  padding: 2rem;
+  font-size: 4rem;
+}
+.box.is-active {
+  background-color: yellow;
+  padding: 2rem;
+  font-size: 4rem;
+}
+
+/* FAQs */
+
+.accordion {
+  border-bottom: 1px solid grey;
+}
+
+.accordion-title {
+  color: green;
+}
+
+.accordion-content {
+  color: blue;
+}

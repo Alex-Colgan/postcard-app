@@ -1,16 +1,16 @@
 //import logo from "./logo.svg";
 import "./App.css";
-import Postcard from "./Components/Postcard";
-//import Tool from './Components/Tool'
-
+import Postcard from "./Components/Postcard.js";
+//import Tool from './Components/Tool.js'
 //import beach from './beach.avif'
+import Box from "./Components/box.js"; // Imports the Box.js
+import Form from "./Components/Form/index.js"; // Imports the index.js from the Form folder
+import Accordion from "./Components/Accordion.js";
 
 function App() {
-  
   return (
     <div className="App">
       <header className="App-header">
-
         {/* Comment here 
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -25,12 +25,28 @@ function App() {
           Learn React
         </a>
         */}
-        
+
         <div>
-          <h2>Hello from App.</h2>
-          <Postcard Text="Beach" Image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2073&q=80"/>
+          <Accordion title="How do I contact you?" />
+          <Accordion title="What is the best way to use your product?" />
+          <Accordion title="Is there a phone number?" />
         </div>
 
+        <div>
+          <h2>Name form.</h2>
+          <Form />
+        </div>
+
+        <div>
+          <Box>This is the First box.</Box>
+        </div>
+
+        <div>
+          <Postcard
+            text="Beach"
+            image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2073&q=80"
+          />
+        </div>
       </header>
 
       {/* Comment here 
@@ -38,7 +54,6 @@ function App() {
         <Tool name="Ihechikara" tool="Figma"/>
       </div>
       */}
-
     </div>
   );
 }
