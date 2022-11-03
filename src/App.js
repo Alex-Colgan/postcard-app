@@ -8,8 +8,19 @@ import Form from "./Components/Form/index.js"; // Imports the index.js from the 
 import Accordion from "./Components/Accordion.js";
 import Accordion2 from "./Components/Accordion2.js";
 import { data } from "./Components/data";
+import Box2 from "./Components/box2";
+import Box3 from "./Components/box3";
+import Map1 from "./Components/map1";
+import {useState} from "react";
 
 function App() {
+  let animalsArray = ["dog", "cat", "chicken", "cow", "sheep", "horse"];
+  const [list, setList] = useState(animalsArray);
+  const drinks = ['water', 'tea', 'coffee'];
+  function changeList () {
+    setList(drinks);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -27,6 +38,19 @@ function App() {
           Learn React
         </a>
         */}
+
+        <div>
+          <Map1></Map1>
+          <Map1 handleclick={changeList}>{list}</Map1>
+        </div>
+
+        <div>
+          <Box2></Box2>
+        </div>
+
+        <div>
+          <Box3></Box3>
+        </div>
 
         <div>
           <h2>FAQ</h2>
